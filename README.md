@@ -1,4 +1,6 @@
-#### Cache implementation in C++
+![CI](https://github.com/H-Shen/Caches/workflows/Caches%20CI/badge.svg)
+
+#### The implementations of caches in C++
 
 The project includes the implementations of three cache replacement policies using single thread:
 
