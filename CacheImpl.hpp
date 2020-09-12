@@ -13,6 +13,8 @@ private:
 public:
   explicit Cache(std::size_t capacity) : capacity(capacity) {}
 
+  virtual ~Cache() = default;
+
   size_t getCapacity() const { return capacity; }
 
   void setCapacity(size_t newCapacity) { capacity = newCapacity; }
