@@ -2,8 +2,9 @@
 
 #### The implementations of caches in C++
 
-The project includes the implementations of three cache replacement policies using single thread:
+The project includes the implementations of four cache replacement policies using single thread:
 
+*   First in last out (FILO)
 *   First in first out (FIFO)
 *   Least recently used (LRU)
 *   Least frequently used (LFU)
