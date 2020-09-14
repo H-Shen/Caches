@@ -26,7 +26,7 @@ struct custom_hash {
 };
 
 #ifdef UNIT_TESTING
-TEST_CASE("LFU Test 1 with integers as key") {
+TEST_CASE("LFU Test 1 with integers as keys") {
   constexpr std::size_t CAPACITY = 2;
   auto cache =
       std::make_shared<CacheImpl::LFUCache<int, int, custom_hash, custom_hash>>(
@@ -85,6 +85,21 @@ TEST_CASE("FIFO Test 2 with std::strings as keys") {
   REQUIRE_THROWS_AS(cache->get("second_item"), std::invalid_argument);
   cache->put("fifth_item", 0);
   REQUIRE(cache->get("fifth_item") == 0);
+}
+
+TEST_CASE("FILO Test 1 with integers as keys") {
+  constexpr std::size_t CAPACITY = 3;
+  auto cache = CacheImpl::FILOCache<int, int>(CAPACITY);
+  cache.put(1, 1);
+  cache.put(1, 2);
+  REQUIRE(cache.get(1) == 2);
+  REQUIRE_THROWS_AS(cache.get(2), std::invalid_argument);
+  cache.put(2, 3);
+  cache.put(3, 4);
+  cache.put(4, 5);
+  REQUIRE_THROWS_AS(cache.get(3), std::invalid_argument);
+  REQUIRE(cache.get(4) == 5);
+  REQUIRE(cache.get(1) == 2);
 }
 
 TEST_CASE("LRU Test 1 with integers as keys") {
