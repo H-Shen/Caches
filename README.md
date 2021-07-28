@@ -80,7 +80,7 @@ The project has been tested with:
 *   g++ 8.3.1
 *   cmake 3.14.4
 
-#### Reference
+#### References
 *   [Cache replacement policies](https://en.wikipedia.org/wiki/Cache_replacement_policies)
 *   [LFU Cache](https://leetcode.com/problems/lfu-cache/)
 *   [LRU Cache](https://leetcode.com/problems/lru-cache/)
