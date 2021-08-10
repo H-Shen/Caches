@@ -84,4 +84,6 @@ The project has been tested with:
 *   [Cache replacement policies](https://en.wikipedia.org/wiki/Cache_replacement_policies)
 *   [LFU Cache](https://leetcode.com/problems/lfu-cache/)
 *   [LRU Cache](https://leetcode.com/problems/lru-cache/)
+*   [Leetcode 146](https://leetcode.com/problems/lru-cache/)
+*   [Leetcode 460](https://leetcode.com/problems/lfu-cache/)
 *   [Blowing up unordered_map, and how to stop getting hacked on it](https://codeforces.com/blog/entry/62393)
