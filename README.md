@@ -1,6 +1,6 @@
 ![CI](https://github.com/H-Shen/Caches/workflows/Caches%20CI/badge.svg)
 
-#### The implementations of caches in C++
+#### The toy implementations of caches in C++
 
 The project includes the implementations of four cache replacement policies using single thread:
 
