@@ -80,6 +80,10 @@ The project has been tested with:
 *   g++ 8.3.1
 *   cmake 3.14.4
 
+#### PS
+
+If you are preparing for interviews for Amazon SDE, I suggested you take a look at the implementation of LRU/LFU implementation.
+
 #### References
 *   [Cache replacement policies](https://en.wikipedia.org/wiki/Cache_replacement_policies)
 *   [LFU Cache](https://leetcode.com/problems/lfu-cache/)
