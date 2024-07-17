@@ -1,6 +1,6 @@
 ![CI](https://github.com/H-Shen/Caches/workflows/Caches%20CI/badge.svg)
 
-#### The toy implementations of caches in C++
+#### The toy implementations of caches in C++ 17
 
 The project includes the implementations of four cache replacement policies using single thread:
 
@@ -9,7 +9,11 @@ The project includes the implementations of four cache replacement policies usin
 *   Least recently used (LRU)
 *   Least frequently used (LFU)
 
-#### Usage
+#### Requirements
+
+*   cmake >= 3.14
+
+#### Introduction and Usage
 
 The implementations are easy to use and are included within a single namespace in a single header file *CacheImpl.hpp*. The user can provide the type of data to store in the cache since the implementation is generic, also the user is able to provide custom hash function for inner hash maps in the cache for better efficiency. The project used [Catch2](https://github.com/catchorg/Catch2) for unit testing. Any requests about any issues or updates are welcome.
 
@@ -69,16 +73,6 @@ int main(int argc, char **argv) {
   return 0;
 }
 ```
-
-#### Requirements
-
-A C++ compiler that supports C++11 standard.
-
-The project has been tested with:
-
-*   clang++ 11.0.3
-*   g++ 8.3.1
-*   cmake 3.14.4
 
 #### PS
 
