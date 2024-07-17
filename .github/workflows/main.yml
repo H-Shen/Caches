@@ -1,4 +1,4 @@
-name: Caches_Build_And_Test
+name: Caches CI
 
 on:
   push:
@@ -9,19 +9,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        
+      - name: Create Build Environment
+        run: cmake -E make_directory ${{runner.workspace}}/build
 
-    - name: Install CMake
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install cmake -y
-        cmake --version
+      - name: Configure CMake
+        shell: bash
+        working-directory: ${{runner.workspace}}/build
+        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
       
-    - name: Build and test
-      run: |
-        cmake .
-        make
-        ./Caches
+      - name: Test
+        working-directory: ${{runner.workspace}}/build
+        shell: bash
+        run: |
+          make
+          ./Caches
